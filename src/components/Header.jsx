@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 function Header() {
   return (
     <header className="bg-white border-b border-gray-200">
-      <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <nav className="px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex-shrink-0">
             <Link to="/" className="text-2xl font-bold text-black">
@@ -11,24 +11,33 @@ function Header() {
             </Link>
           </div>
 
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="flex items-center space-x-8">
             <Link to="/catalog" className="text-gray-700 hover:text-black">
               catalog
             </Link>
-            <Link to="/collections" className="text-gray-700 hover:text-black">
+            <Link
+              to="/catalog"
+              className="hidden md:block text-gray-700 hover:text-black"
+            >
               collections
             </Link>
-            <Link to="/sale" className="text-gray-700 hover:text-black">
+            <Link
+              to="/catalog"
+              className="hidden md:block text-gray-700 hover:text-black"
+            >
               sale
             </Link>
-            <Link to="/about" className="text-gray-700 hover:text-black">
+            <Link
+              to="/"
+              className="hidden md:block text-gray-700 hover:text-black"
+            >
               about
             </Link>
           </div>
 
-          <div className="flex items-center space-x-6">
+          <div className="flex items-center space-x-1 md:space-x-6">
             <Link
-              to="/account"
+              to="/"
               className="hidden md:flex text-gray-700 hover:text-black text-sm"
             >
               account
